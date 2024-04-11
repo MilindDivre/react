@@ -7,13 +7,20 @@
 </head>
 <body>
     <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script>
-        <!-- create a element using document.createElement -->
+        <!-- create a element using document.createElement
         const helloworldElement = document.createElement("h1")
         helloworldElement.innerHTML="hello world"
-
         const root = document.getElementById("root")
-        root.appendChild(helloworldElement)
+        root.appendChild(helloworldElement) -->
+    </script>
+    <script>
+        const helloworldElement = React.createElement("h1",{id:"helloworld"},"Hello World from React")
+        console.log(helloworldElement)
+        const root = ReactDOM.createRoot(document.getElementById("root"))
+        root.render(helloworldElement)
     </script>
 </body>
 </html>
